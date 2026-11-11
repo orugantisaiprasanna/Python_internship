@@ -1,0 +1,971 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "name": "xpython",
+      "display_name": "Python 3.13 (XPython)",
+      "language": "python"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.13.1"
+    }
+  },
+  "nbformat_minor": 5,
+  "nbformat": 4,
+  "cells": [
+    {
+      "id": "f412af67-7627-47d8-959d-3b07b6785f70",
+      "cell_type": "code",
+      "source": "x,y,z=10,20,30\nx,y,z=y,z,x\nprint(x,y,z)",
+      "metadata": {
+        "trusted": true,
+        "scrolled": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "20 30 10\n"
+        }
+      ],
+      "execution_count": 1
+    },
+    {
+      "id": "518796d3-1924-417d-a61a-7836041439f1",
+      "cell_type": "code",
+      "source": "x,y,z=10,20,30\nx,y,z=y,z,x\nprint(x,y,z)",
+      "metadata": {
+        "trusted": true,
+        "scrolled": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "20 30 10\n"
+        }
+      ],
+      "execution_count": 1
+    },
+    {
+      "id": "efe12179-71ce-48d8-9082-32172aee7817",
+      "cell_type": "code",
+      "source": "a=b=[1,2]\na.append(3);\nprint(b)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "[1, 2, 3]\n"
+        }
+      ],
+      "execution_count": 2
+    },
+    {
+      "id": "1b8e748b-b1d0-4165-9c13-abaf8d38f2ca",
+      "cell_type": "code",
+      "source": "print(\"A\",\"B\",sep=\"*\",end=\"\");\nprint(\"C\")",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "A*BC\n"
+        }
+      ],
+      "execution_count": 4
+    },
+    {
+      "id": "f2f3099c-5cd6-4c95-9938-a80aa8d13d83",
+      "cell_type": "code",
+      "source": "import math;\nprint(math.ceil(-4.2))\nmath.floor(-4.2)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "-4\n"
+        },
+        {
+          "execution_count": 10,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "-5"
+          },
+          "metadata": {}
+        }
+      ],
+      "execution_count": 10
+    },
+    {
+      "id": "8c57fca7-ecdb-4e08-b3e4-88f4056153a6",
+      "cell_type": "code",
+      "source": "print(0 or \"\" or [] or \n      \"Found\" or \"lost\")\n      ",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Found\n"
+        }
+      ],
+      "execution_count": 11
+    },
+    {
+      "id": "95365ff0-78fa-49ca-a0a9-e9b9da82f48c",
+      "cell_type": "code",
+      "source": "print(5 and[1] and 0 and \"Done\")",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "0\n"
+        }
+      ],
+      "execution_count": 13
+    },
+    {
+      "id": "42936555-87a0-4b2d-bcdd-d1b993baf340",
+      "cell_type": "code",
+      "source": "print(2**2**3)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "256\n"
+        }
+      ],
+      "execution_count": 14
+    },
+    {
+      "id": "c0f35ffe-b153-4c4e-8bf4-fd72dcb357d2",
+      "cell_type": "code",
+      "source": "t=(1,2);\nprint(id(t)==id(t+(3,)))",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "False\n"
+        }
+      ],
+      "execution_count": 1
+    },
+    {
+      "id": "09eb6a29-41e5-46f1-9448-ca22f0cb76dd",
+      "cell_type": "code",
+      "source": "d={'x':10};\nprint(d.get('y',d.get('x')))",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "10\n"
+        }
+      ],
+      "execution_count": 3
+    },
+    {
+      "id": "15f499c8-c2e4-49be-b393-0f01c7e0421a",
+      "cell_type": "code",
+      "source": "s1={1,2,3};\ns2={3,4};\nprint(s1.intersection(s2))",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "{3}\n"
+        }
+      ],
+      "execution_count": 4
+    },
+    {
+      "id": "3bbdc4c6-a2f9-45c6-aaf6-c185c1c2defc",
+      "cell_type": "code",
+      "source": "print(10+10//3*2)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "16\n"
+        }
+      ],
+      "execution_count": 5
+    },
+    {
+      "id": "c4a65cc1-6633-454f-b4c7-f91f34ad71a8",
+      "cell_type": "code",
+      "source": "L=[1,2,3,4];\nL[1:3]=[9];\nprint(L);",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "[1, 9, 4]\n"
+        }
+      ],
+      "execution_count": 11
+    },
+    {
+      "id": "5291ef0d-8ceb-407a-bfb2-2844ef8fb54d",
+      "cell_type": "code",
+      "source": "print(int(\"10\"+\"20\")*2)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "2040\n"
+        }
+      ],
+      "execution_count": 12
+    },
+    {
+      "id": "58114d07-4ede-4816-9c4d-600fd47afe82",
+      "cell_type": "code",
+      "source": "x=[1,2];\ny=[1,2];\nprint(x==y, x is y)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "True False\n"
+        }
+      ],
+      "execution_count": 16
+    },
+    {
+      "id": "58ccfbc7-ba43-4eb6-922f-4673a6e9c345",
+      "cell_type": "code",
+      "source": "x=5;\nprint(f\"{x*2=}\")",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "x*2=10\n"
+        }
+      ],
+      "execution_count": 17
+    },
+    {
+      "id": "a9ea1102-5cad-4343-8c2d-a7f3e9d7b502",
+      "cell_type": "code",
+      "source": "d={1:'A'};d.update({1:'B',2:'C'});\nprint(d)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "{1: 'B', 2: 'C'}\n"
+        }
+      ],
+      "execution_count": 19
+    },
+    {
+      "id": "7cfb3c6c-e6ff-4250-8d1d-b476469d6ad9",
+      "cell_type": "code",
+      "source": "x=10;\nprint(\"HIGH\" if x>15 else\n\"MID\" if x > 5 else \"LOW\")",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "MID\n"
+        }
+      ],
+      "execution_count": 26
+    },
+    {
+      "id": "ce044dd7-f5d8-4073-bd81-bf88dbd43d39",
+      "cell_type": "code",
+      "source": "print(-12%5)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "3\n"
+        }
+      ],
+      "execution_count": 27
+    },
+    {
+      "id": "67e8e42f-3704-46d6-b93f-572ee3cd5893",
+      "cell_type": "code",
+      "source": "word=\"radar\";\nprint(word[0]==word[-1] and\n      word[1:4]==word[1:4][::-1])",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "True\n"
+        }
+      ],
+      "execution_count": 29
+    },
+    {
+      "id": "0559e132-038b-4a7b-90e8-92ad0ea40e39",
+      "cell_type": "code",
+      "source": "s={1,2,3};\ns.discard(4);\ns.remove(2);\nprint(s)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "{1, 3}\n"
+        }
+      ],
+      "execution_count": 30
+    },
+    {
+      "id": "c5fb9aa9-ff37-49c5-8f68-51ed7463abc9",
+      "cell_type": "code",
+      "source": "print(bool([0]),bool(0.0))",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "True False\n"
+        }
+      ],
+      "execution_count": 31
+    },
+    {
+      "id": "9273cfb7-5399-4a03-8d2d-f58408326def",
+      "cell_type": "code",
+      "source": "import math;\nprint(math.fabs(-7))",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "7.0\n"
+        }
+      ],
+      "execution_count": 32
+    },
+    {
+      "id": "adc2c46c-1024-49a3-9552-1882980b567b",
+      "cell_type": "code",
+      "source": "print(int(True)+int(False))",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "1\n"
+        }
+      ],
+      "execution_count": 34
+    },
+    {
+      "id": "59168837-2153-4656-92c8-8168fe973ddc",
+      "cell_type": "code",
+      "source": "a,b=0,1;\na,b=b,a+b;\nprint(a,b);",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "1 1\n"
+        }
+      ],
+      "execution_count": 35
+    },
+    {
+      "id": "1d8dde93-4288-4024-9474-e1f228bca259",
+      "cell_type": "code",
+      "source": "s=\"internship\";\nprint(s[1:8:2])",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "nenh\n"
+        }
+      ],
+      "execution_count": 36
+    },
+    {
+      "id": "3a658fef-4249-4dec-a69b-84b3330d8fef",
+      "cell_type": "code",
+      "source": "t= (1,2,[3,4]);\nt[2].extend([5]);\nprint(t)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "(1, 2, [3, 4, 5])\n"
+        }
+      ],
+      "execution_count": 37
+    },
+    {
+      "id": "ce42a6f5-02cb-452e-970e-13eaaad6699a",
+      "cell_type": "code",
+      "source": "print(1<2<3==3>1)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "True\n"
+        }
+      ],
+      "execution_count": 38
+    },
+    {
+      "id": "3533c9f5-a15f-4854-9c96-4b4dc0e4c256",
+      "cell_type": "code",
+      "source": "print(True+True*False-True)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "0\n"
+        }
+      ],
+      "execution_count": 39
+    },
+    {
+      "id": "50aa2cb8-6cf5-47f4-ac54-8c0b639e2f4c",
+      "cell_type": "code",
+      "source": "x,y=5,10;\nprint((x,y)==(y,x))",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "False\n"
+        }
+      ],
+      "execution_count": 40
+    },
+    {
+      "id": "9aa2c0d6-1c4c-48fc-8c11-1baab5c835d3",
+      "cell_type": "code",
+      "source": "L=[[0]]*3;\nL[0][0]=1;\nprint(L)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "[[1], [1], [1]]\n"
+        }
+      ],
+      "execution_count": 41
+    },
+    {
+      "id": "95ff648d-a79c-4ac1-920d-fdf0bd7474c8",
+      "cell_type": "code",
+      "source": "if x == 10\\n print(x)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "ename": "<class 'SyntaxError'>",
+          "evalue": "unexpected character after line continuation character (3041771703.py, line 1)",
+          "traceback": [
+            "  \u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[27]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[31m    \u001b[39m\u001b[31mif x == 10\\n print(x)\u001b[39m\n               ^\n\u001b[31mSyntaxError\u001b[39m\u001b[31m:\u001b[39m unexpected character after line continuation character\n"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": 32
+    },
+    {
+      "id": "bbb523bb-38de-4f79-8ee5-f80ba3c26a02",
+      "cell_type": "code",
+      "source": "conda create environment myenv python=3.10",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stderr",
+          "output_type": "stream",
+          "text": "Error: Unknown conda command 'create'"
+        }
+      ],
+      "execution_count": 33
+    },
+    {
+      "id": "02f7c18f-ce08-4aa8-9750-05dd1d1790da",
+      "cell_type": "code",
+      "source": "True=5",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "ename": "<class 'SyntaxError'>",
+          "evalue": "cannot assign to True (3091963775.py, line 1)",
+          "traceback": [
+            "  \u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[28]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[31m    \u001b[39m\u001b[31mTrue=5\u001b[39m\n    ^\n\u001b[31mSyntaxError\u001b[39m\u001b[31m:\u001b[39m cannot assign to True\n"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": 34
+    },
+    {
+      "id": "a64b242d-bd4a-4ddd-8700-0d496f23940f",
+      "cell_type": "code",
+      "source": "my_set = {[1, 2], 3}",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "ename": "<class 'TypeError'>",
+          "evalue": "unhashable type: 'list'",
+          "traceback": [
+            "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+            "\u001b[31mTypeError\u001b[39m                                 Traceback (most recent call last)",
+            "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[29]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m my_set = {[\u001b[32m1\u001b[39m, \u001b[32m2\u001b[39m], \u001b[32m3\u001b[39m}\n",
+            "\u001b[31mTypeError\u001b[39m: unhashable type: 'list'"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": 35
+    },
+    {
+      "id": "e8d75e8f-950f-4871-adbd-79b9e2fc76e6",
+      "cell_type": "code",
+      "source": "d = {[1]: 'a'}",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "ename": "<class 'TypeError'>",
+          "evalue": "unhashable type: 'list'",
+          "traceback": [
+            "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+            "\u001b[31mTypeError\u001b[39m                                 Traceback (most recent call last)",
+            "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[30]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m d = {[\u001b[32m1\u001b[39m]: \u001b[33m'a'\u001b[39m}\n",
+            "\u001b[31mTypeError\u001b[39m: unhashable type: 'list'"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": 36
+    },
+    {
+      "id": "3e929219-e3b0-48db-b86c-5d4d271aa05c",
+      "cell_type": "code",
+      "source": "t = (1, 2); t[0] = 3",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "ename": "<class 'TypeError'>",
+          "evalue": "'tuple' object does not support item assignment",
+          "traceback": [
+            "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+            "\u001b[31mTypeError\u001b[39m                                 Traceback (most recent call last)",
+            "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[31]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m t = (\u001b[32m1\u001b[39m, \u001b[32m2\u001b[39m); t[\u001b[32m0\u001b[39m] = \u001b[32m3\u001b[39m\n",
+            "\u001b[31mTypeError\u001b[39m: 'tuple' object does not support item assignment"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": 37
+    },
+    {
+      "id": "8ff1bd96-ca2c-4ba2-913f-2257400cac55",
+      "cell_type": "code",
+      "source": "s = \"Code\"; s[1] = \"O\"",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "ename": "<class 'TypeError'>",
+          "evalue": "'str' object does not support item assignment",
+          "traceback": [
+            "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+            "\u001b[31mTypeError\u001b[39m                                 Traceback (most recent call last)",
+            "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[32]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m s = \u001b[33m\"Code\"\u001b[39m; s[\u001b[32m1\u001b[39m] = \u001b[33m\"O\"\u001b[39m\n",
+            "\u001b[31mTypeError\u001b[39m: 'str' object does not support item assignment"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": 38
+    },
+    {
+      "id": "07cc1cc3-cb45-441c-9d75-6cd06db9ba67",
+      "cell_type": "code",
+      "source": "print(int(\"15.5\"))",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "ename": "<class 'ValueError'>",
+          "evalue": "invalid literal for int() with base 10: '15.5'",
+          "traceback": [
+            "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+            "\u001b[31mValueError\u001b[39m                                Traceback (most recent call last)",
+            "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[33]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m print(int(\u001b[33m\"15.5\"\u001b[39m))\n",
+            "\u001b[31mValueError\u001b[39m: invalid literal for int() with base 10: '15.5'"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": 39
+    },
+    {
+      "id": "2c8cea0d-ba73-42c2-ab04-a8dc67283080",
+      "cell_type": "code",
+      "source": "age = input(\"Age: \"); print(age + 5)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "Age:  18\n"
+        },
+        {
+          "ename": "<class 'TypeError'>",
+          "evalue": "can only concatenate str (not \"int\") to str",
+          "traceback": [
+            "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+            "\u001b[31mTypeError\u001b[39m                                 Traceback (most recent call last)",
+            "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[34]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m ge = input(\u001b[33m\"Age: \"\u001b[39m); print(age + \u001b[32m5\u001b[39m)\n",
+            "\u001b[31mTypeError\u001b[39m: can only concatenate str (not \"int\") to str"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": 40
+    },
+    {
+      "id": "8f172b85-d3c5-43f6-ab82-a19781585f5f",
+      "cell_type": "code",
+      "source": "print(ceil(5.5))",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "ename": "<class 'NameError'>",
+          "evalue": "name 'ceil' is not defined",
+          "traceback": [
+            "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+            "\u001b[31mNameError\u001b[39m                                 Traceback (most recent call last)",
+            "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[35]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m print(ceil(\u001b[32m5.5\u001b[39m))\n",
+            "\u001b[31mNameError\u001b[39m: name 'ceil' is not defined"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": 41
+    },
+    {
+      "id": "94f5d629-b344-4679-8bf5-e34bfe9eee9d",
+      "cell_type": "code",
+      "source": "x = 5; elif x > 3: print(x)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "ename": "<class 'SyntaxError'>",
+          "evalue": "invalid syntax (1178481455.py, line 1)",
+          "traceback": [
+            "  \u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[36]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[31m    \u001b[39m\u001b[31mx = 5; elif x > 3: print(x)\u001b[39m\n           ^\n\u001b[31mSyntaxError\u001b[39m\u001b[31m:\u001b[39m invalid syntax\n"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": 42
+    },
+    {
+      "id": "cc1ebb5b-5ca0-4613-9549-4085d7e7ed13",
+      "cell_type": "code",
+      "source": "val = 10; print(f\"Result: {value}\")",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "ename": "<class 'NameError'>",
+          "evalue": "name 'value' is not defined",
+          "traceback": [
+            "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+            "\u001b[31mNameError\u001b[39m                                 Traceback (most recent call last)",
+            "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[37]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m val = \u001b[32m10\u001b[39m; print(f\"Result: {value}\")\n",
+            "\u001b[31mNameError\u001b[39m: name 'value' is not defined"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": 43
+    },
+    {
+      "id": "814ca46b-87bf-4f8d-ac93-a8c71fa078a5",
+      "cell_type": "code",
+      "source": "t = (1, 2); t.append(3)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "ename": "<class 'AttributeError'>",
+          "evalue": "'tuple' object has no attribute 'append'",
+          "traceback": [
+            "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+            "\u001b[31mAttributeError\u001b[39m                            Traceback (most recent call last)",
+            "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[38]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m t = (\u001b[32m1\u001b[39m, \u001b[32m2\u001b[39m); t.append(\u001b[32m3\u001b[39m)\n",
+            "\u001b[31mAttributeError\u001b[39m: 'tuple' object has no attribute 'append'"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": 44
+    },
+    {
+      "id": "5436548a-b1ed-4bb0-859f-68abec7f6e8f",
+      "cell_type": "code",
+      "source": "print(True and 5 / 0)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "ename": "<class 'ZeroDivisionError'>",
+          "evalue": "division by zero",
+          "traceback": [
+            "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+            "\u001b[31mZeroDivisionError\u001b[39m                         Traceback (most recent call last)",
+            "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[39]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m print(\u001b[38;5;28;01mTrue\u001b[39;00m \u001b[38;5;28;01mand\u001b[39;00m \u001b[32m5\u001b[39m / \u001b[32m0\u001b[39m)\n",
+            "\u001b[31mZeroDivisionError\u001b[39m: division by zero"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": 45
+    },
+    {
+      "id": "2db8d08a-2e7e-45bb-beb5-b36923cd85e7",
+      "cell_type": "code",
+      "source": "a, b, c = 10, 20",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "ename": "<class 'ValueError'>",
+          "evalue": "not enough values to unpack (expected 3, got 2)",
+          "traceback": [
+            "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+            "\u001b[31mValueError\u001b[39m                                Traceback (most recent call last)",
+            "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[40]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m a, b, c = \u001b[32m10\u001b[39m, \u001b[32m20\u001b[39m\n",
+            "\u001b[31mValueError\u001b[39m: not enough values to unpack (expected 3, got 2)"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": 46
+    },
+    {
+      "id": "0f4e181e-9174-413e-9c6e-23ea716ad8fb",
+      "cell_type": "code",
+      "source": "import math; print(math.fabs(\"Hello\"))",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "ename": "<class 'TypeError'>",
+          "evalue": "must be real number, not str",
+          "traceback": [
+            "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+            "\u001b[31mTypeError\u001b[39m                                 Traceback (most recent call last)",
+            "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[41]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m \u001b[38;5;28;01mimport\u001b[39;00m math; print(math.fabs(\u001b[33m\"Hello\"\u001b[39m))\n",
+            "\u001b[31mTypeError\u001b[39m: must be real number, not str"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": 47
+    },
+    {
+      "id": "6139672c-f28a-417b-9c62-300d5b0fa55e",
+      "cell_type": "code",
+      "source": "s1 = {1}; s2 = {2}; print(s1 + s2)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "ename": "<class 'TypeError'>",
+          "evalue": "unsupported operand type(s) for +: 'set' and 'set'",
+          "traceback": [
+            "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+            "\u001b[31mTypeError\u001b[39m                                 Traceback (most recent call last)",
+            "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[42]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m s1 = {\u001b[32m1\u001b[39m}; s2 = {\u001b[32m2\u001b[39m}; print(s1 + s2)\n",
+            "\u001b[31mTypeError\u001b[39m: unsupported operand type(s) for +: 'set' and 'set'"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": 48
+    },
+    {
+      "id": "27b818a7-36aa-4ce1-8954-5337ccbdc0fa",
+      "cell_type": "code",
+      "source": "t = (1, 2, [3, 4]); t[2] += [5, 6]",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "ename": "<class 'TypeError'>",
+          "evalue": "'tuple' object does not support item assignment",
+          "traceback": [
+            "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+            "\u001b[31mTypeError\u001b[39m                                 Traceback (most recent call last)",
+            "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[43]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m t = (\u001b[32m1\u001b[39m, \u001b[32m2\u001b[39m, [\u001b[32m3\u001b[39m, \u001b[32m4\u001b[39m]); t[\u001b[32m2\u001b[39m] += [\u001b[32m5\u001b[39m, \u001b[32m6\u001b[39m]\n",
+            "\u001b[31mTypeError\u001b[39m: 'tuple' object does not support item assignment"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": 49
+    },
+    {
+      "id": "3402f577-9da8-42af-9b53-59c3a4ecec92",
+      "cell_type": "code",
+      "source": "x = 5; print(f\"{x:.2f}\" + f\"{x:.2d}\")",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "ename": "<class 'ValueError'>",
+          "evalue": "Precision not allowed in integer format specifier",
+          "traceback": [
+            "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+            "\u001b[31mValueError\u001b[39m                                Traceback (most recent call last)",
+            "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[44]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m x = \u001b[32m5\u001b[39m; print(f\"{x:.2f}\" + f\"{x:.2d}\")\n",
+            "\u001b[31mValueError\u001b[39m: Precision not allowed in integer format specifier"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": 50
+    },
+    {
+      "id": "8ce33b0a-c2be-4865-9115-3be87747d9dc",
+      "cell_type": "code",
+      "source": "L = [1, 2, 3]; L = L.append(4); print(L[0])",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "ename": "<class 'TypeError'>",
+          "evalue": "'NoneType' object is not subscriptable",
+          "traceback": [
+            "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+            "\u001b[31mTypeError\u001b[39m                                 Traceback (most recent call last)",
+            "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[45]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m L = [\u001b[32m1\u001b[39m, \u001b[32m2\u001b[39m, \u001b[32m3\u001b[39m]; L = L.append(\u001b[32m4\u001b[39m); print(L[\u001b[32m0\u001b[39m])\n",
+            "\u001b[31mTypeError\u001b[39m: 'NoneType' object is not subscriptable"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": 51
+    },
+    {
+      "id": "8fd1ec6b-8401-46bb-82f6-bc7e641aa154",
+      "cell_type": "code",
+      "source": "",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    }
+  ]
+}
